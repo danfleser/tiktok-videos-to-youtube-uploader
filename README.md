@@ -15,8 +15,8 @@ Foobar is a Python library for dealing with word pluralization.
 ## Installation
 - install [nodejs](https://nodejs.org/en/download/)
 - install [python](https://www.python.org/downloads/)
-- you need to run a docker container on localhost with (nvidia tacotron2 tts)[https://github.com/NVIDIA/tacotron2] in order to use number 9
-- optional: proxy server if you want to make views to a youtube video (i used this service)[https://my.didsoft.com/] not sponsored
+- you need to run a docker container on localhost with [nvidia tacotron2 tts](https://github.com/NVIDIA/tacotron2) in order to use number 9
+- optional: proxy server if you want to make views to a youtube video [i used this service](https://my.didsoft.com/) not sponsored
 
 - exec command from node-requirements.txt file
 - install requirements.txt file using pip
