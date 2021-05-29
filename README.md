@@ -10,7 +10,7 @@
 9. Launch multiple instances of chrome browser to make views to a certian video on youtube(you need a proxy server for this to work)
 10. Generate lip synced videos(provide dummy video with face to lipsync, and a txt file with the text to be read)
 
-Foobar is a Python library for dealing with word pluralization.
+All commands run in parralel.
 
 ## Installation
 - install [nodejs](https://nodejs.org/en/download/)
