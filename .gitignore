@@ -1,0 +1,10 @@
+/*.mp4
+/**/*.mp4
+/**/**.mp4
+/^#\w+$/
+/*.json
+/**/*.json
+**/**/*.mp3
+*.log
+
+!/scrapedVideosHistory/*.json
