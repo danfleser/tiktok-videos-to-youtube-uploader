@@ -214,38 +214,38 @@ def start_parallel_download_upload():
     )
     print('Finished removing unwatched videos\n')
 
-    # print('Started cleaning')
-    # Parallel(n_jobs=num_cores)(
-    #     delayed(clean_directory)(account) for account in list(account_hashtags.values())
-    # )
-    # print('Finished cleaning\n')
-    #
-    # print('Started downloading')
-    # Parallel(n_jobs=num_cores)(
-    #     delayed(download_videos)(account) for account in list(account_hashtags.values())
-    # )
-    # print('Finished downloading\n')
+    print('Started cleaning')
+    Parallel(n_jobs=num_cores)(
+        delayed(clean_directory)(account) for account in list(account_hashtags.values())
+    )
+    print('Finished cleaning\n')
+    
+    print('Started downloading')
+    Parallel(n_jobs=num_cores)(
+        delayed(download_videos)(account) for account in list(account_hashtags.values())
+    )
+    print('Finished downloading\n')
 
-    # print('Started uploading')
-    # Parallel(n_jobs=num_cores)(
-    #     delayed(upload_videos)(account) for account in list(account_hashtags.values())
-    # )
-    # print('Finished uploading')
+    print('Started uploading')
+    Parallel(n_jobs=num_cores)(
+        delayed(upload_videos)(account) for account in list(account_hashtags.values())
+    )
+    print('Finished uploading')
 
-    # print('Started bulk comments reply')
-    # Parallel(n_jobs=num_cores)(
-    #     delayed(bulk_comments_reply)(account) for account in list(account_hashtags.values())
-    # )
-    # print('Finished bulk comments reply\n')
+    print('Started bulk comments reply')
+    Parallel(n_jobs=num_cores)(
+        delayed(bulk_comments_reply)(account) for account in list(account_hashtags.values())
+    )
+    print('Finished bulk comments reply\n')
 
-    # wait 3 hours to let youtube process uploaded videos to know that are copyrighted
-    # time.sleep(60 * 60 * 3)
+    wait 3 hours to let youtube process uploaded videos to know that are copyrighted
+    time.sleep(60 * 60 * 3)
 
-    # print('Started removing copyrighted videos')
-    # Parallel(n_jobs=num_cores)(
-    #     delayed(remove_copyrighted_videos)(account) for account in list(account_hashtags.values())
-    # )
-    # print('Finished removing copyrighted videos\n')
+    print('Started removing copyrighted videos')
+    Parallel(n_jobs=num_cores)(
+        delayed(remove_copyrighted_videos)(account) for account in list(account_hashtags.values())
+    )
+    print('Finished removing copyrighted videos\n')
 
     # kill firefox zombie processes if any
     os.system("taskkill /IM firefox.exe /F")
